@@ -56,4 +56,7 @@ ScriptblockPlugin.prototype.interact = function(target) {
   } else {
     eval(bd.script);
   }
+
+  // prevent further interaction (like placing blocks, if they clicked us with a block in hand)
+  return true;
 };
