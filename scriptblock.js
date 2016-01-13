@@ -22,6 +22,7 @@ function ScriptblockPlugin(game, opts) {
 ScriptblockPlugin.prototype.enable = function() {
   this.registry.registerBlock('scriptblock', {
     texture: 'command_block',
+    displayName: 'Script Block',
     onInteract: ScriptblockPlugin.prototype.interact.bind(this)
   });
 
