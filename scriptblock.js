@@ -46,7 +46,11 @@ ScriptblockPlugin.prototype.interact = function(target) {
   // interact (right-click) with top to set script, other sides to run
   // TODO: run script when block takes damage instead (left-click)
   if (target.side === 'top') {
-    bd.script = prompt("Script for block at ("+[x,y,z].join(",")+"): ", bd.script);
+    var newScript = prompt("Script for block at ("+[x,y,z].join(",")+"): ", bd.script);
+
+    if (newScript !== null) {
+      bd.script = newScript;
+    }
 
     this.blockdata.set(x, y, z, bd);
   } else {
