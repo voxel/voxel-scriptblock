@@ -15,7 +15,7 @@ place it in the world.
 
 Right-click on the top of the block to change the script. By default, it will
 popup an alert as shown in the screenshot, but you can run any JavaScript code
-you want.
+you want, including interacting the game world.
 
 Right-click anywhere else on the block to run the script.
 
