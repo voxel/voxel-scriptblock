@@ -33,6 +33,22 @@ ScriptblockPlugin.prototype.disable = function() {
 };
 
 ScriptblockPlugin.prototype.interact = function(target) {
-  console.log(target);
-  // TODO: prompt for script, set at x,y,z
+  var x = target.voxel[0];
+  var y = target.voxel[1];
+  var z = target.voxel[2];
+
+  var bd = this.blockdata.get(x, y, z);
+  if (!bd) {
+    bd = {script: 'alert("Hello, voxel world!")'};
+  }
+
+  // interact (right-click) with top to set script, other sides to run
+  // TODO: run script when block takes damage instead (left-click)
+  if (target.side === 'top') {
+    bd.script = prompt("Script for block at ("+[x,y,z].join(",")+"): ", bd.script);
+
+    this.blockdata.set(x, y, z, bd);
+  } else {
+    eval(bd.script);
+  }
 };
