@@ -1,0 +1,17 @@
+{
+  "name": "voxel-scriptblock",
+  "description": "",
+  "version": "0.0.1",
+  "main": "voxel-scriptblock.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:deathcap/voxel-scriptblock.git"
+  },
+  "keywords": [
+    "voxel",
+    "plugin"
+  ],
+  "dependencies": {
+  },
+  "license": "MIT"
+}
