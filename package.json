@@ -1,7 +1,7 @@
 {
   "name": "voxel-scriptblock",
   "description": "a block to run player-defined JavaScript (voxel.js plugin)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "scriptblock.js",
   "repository": {
     "type": "git",
